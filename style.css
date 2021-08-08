@@ -1,0 +1,18 @@
+.button {
+    text-align: center;
+    background-color: blue;
+    justify-content: center;
+    border-radius: 15px;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    width: auto;
+    border: solid white 2px;
+    line-height: 2.5;
+    font-size: 200%;
+    background-image: linear-gradient(blue, black);
+    box-shadow: 5px 5px black;
+}
+div {
+    text-align: center;
+
+}

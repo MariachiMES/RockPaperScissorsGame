@@ -1,7 +1,7 @@
 alert ("Welcome to my first Rock Paper Scissors Game -- by David Ortiz");
 
 //Declare acceptable responses
-var computerChoice = ["ROCK", "PAPER", "SCISSORS"];
+var computerChoice = ["ROCK", "PAPER", "SCISSORS", "ENZO"];
 
 //Make and Array of smack talk and randomly pull from the array
 var smackTalk = ["Ah, someone has taught you well, I see.", 
@@ -9,8 +9,9 @@ var smackTalk = ["Ah, someone has taught you well, I see.",
                 "That's a nice try, I guess",
                 "Your mother was a TOASTER!!", 
                 "That is an odd choice, but whatevs",
-                "What is THAT supposed to mean?",
-                "I think you might have tried that one before"]
+                "Yeah?? You think so??? We will see...",
+                "I think you might have tried that one before",
+                "Let's see how strong your Kung Fu is..."]
 
 var randomSmack = Math.floor((Math.random() * smackTalk.length));
 
@@ -21,7 +22,7 @@ var computer = Math.floor((Math.random(computerChoice)* 3));
 
 //Creates and array of smack-talk for when the computer wins and randomly pulls from the array
 
-var winningSmack = ["My Kung Fu is better than your Kung Fu. YOU LOSE!!!", 
+var winningSmack = ["My Kung Fu is stronger than your Kung Fu. YOU LOSE!!!", 
                     "HA!!! YOU LOSE!! Better Luck Next time!", 
                     "You will have to think harder if you want to beat me! YOU LOSE!",
                     "YAWN!! Too Easy.  YOU LOSE!", 
@@ -31,7 +32,7 @@ var randomWinningSmack = Math.floor((Math.random() * winningSmack.length));
 
 //Creates an array of smack-talk for when the user loses and randomly pulls from the array
 
-var losingSmack = ["Congratulations! Your Kung Fu was better than my Kung Fu.", 
+var losingSmack = ["Congratulations! Your Kung Fu was stronger than my Kung Fu.", 
                     "YOU WIN! Begginers' Luck", 
                     "YOU WIN! Let's play again!",
                     "OK, I Guess You win! Congratulations!", 
@@ -46,13 +47,16 @@ var randomLosingSmack = Math.floor((Math.random() * losingSmack.length));
 var playGame = function () {
     userChoice = prompt ("please input 'Rock', 'Paper', or 'Scissors'").toUpperCase()
 }
-
 //loops prompt until an acceptable input is made, then talks smack.
 playGame()
     while (!computerChoice.includes(userChoice.toUpperCase())) {
         alert ("Your input does not have good kung fu.  Try Again!!");
         playGame()
     }
+
+if (userChoice === "ENZO") {
+    alert( "I CANNOT DEFEAT ENZO.  YOU WIN!!")
+}
 alert (smackTalk[randomSmack]); 
 
 alert ("You have chosen " + userChoice + "!!     " + "I have chosen " + (computerChoice[computer]) + "!");
